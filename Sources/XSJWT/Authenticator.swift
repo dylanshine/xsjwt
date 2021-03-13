@@ -8,4 +8,6 @@ public struct Authenticator: JWTAuthenticator {
         request.auth.login(jwt)
         return request.eventLoop.makeSucceededFuture(())
     }
+    
+    public init() {}
 }
