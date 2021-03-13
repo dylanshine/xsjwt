@@ -16,7 +16,7 @@ public struct Payload: JWTPayload, Authenticatable {
                 name: String,
                 email: String,
                 isAdmin: Bool,
-                expirationDate: Date) throws {
+                expirationDate: Date) {
         self.id = id
         self.name = name
         self.email = email
