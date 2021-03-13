@@ -2,11 +2,11 @@ import Vapor
 import JWT
 
 public struct Payload: JWTPayload, Authenticatable {
-    let id: UUID
-    let name: String
-    let email: String
-    let isAdmin: Bool
-    let expiration: ExpirationClaim
+    public let id: UUID
+    public let name: String
+    public let email: String
+    public let isAdmin: Bool
+    public let expiration: ExpirationClaim
     
     public func verify(using signer: JWTSigner) throws {
         try self.expiration.verifyNotExpired()
